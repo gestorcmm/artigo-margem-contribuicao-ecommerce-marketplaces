@@ -1,0 +1,35 @@
+:root {
+  --bg: #0F1922;
+  --panel: #182A3A;
+  --panel-strong: #112235;
+  --text: #E6F6FF;
+  --muted: #8CA4B8;
+  --cyan: #00D9D9;
+  --accent: #4A9EFF;
+  --border: rgba(0, 217, 217, 0.14);
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; min-height: 100%; background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+body { display: flex; align-items: center; justify-content: center; padding: 24px; }
+.slide { width: min(1120px, 100%); background: var(--panel); border: 1px solid var(--border); border-radius: 28px; padding: 48px 54px; box-shadow: 0 30px 100px rgba(0,0,0,0.25); }
+.slide h1 { margin: 0 0 18px; font-size: clamp(2.8rem, 4vw, 4.6rem); line-height: 1.02; }
+.slide h2 { margin: 0 0 18px; font-size: clamp(2rem, 3vw, 2.8rem); color: var(--accent); }
+.slide p, .slide li { line-height: 1.75; color: var(--muted); }
+.slide p { margin: 0 0 18px; }
+.slide ul { margin: 0 0 24px 20px; padding: 0; }
+.slide li { margin-bottom: 10px; }
+.callout { background: rgba(0, 217, 217, 0.08); border: 1px solid rgba(0,217,217,0.12); border-radius: 18px; padding: 22px; margin: 26px 0; }
+.formula { background: rgba(255,255,255,0.04); border-left: 4px solid var(--cyan); padding: 18px 20px; border-radius: 12px; font-size: 1.15rem; color: var(--text); margin: 20px 0; }
+.table { width: 100%; border-collapse: collapse; margin: 24px 0; }
+.table th, .table td { padding: 14px 16px; text-align: left; }
+.table thead { background: rgba(0, 217, 217, 0.08); }
+.table th { color: var(--cyan); }
+.table td { border-top: 1px solid rgba(255,255,255,0.08); }
+.footer-nav { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin-top: 34px; }
+.nav-buttons { display: flex; gap: 12px; flex-wrap: wrap; }
+.button, .button-secondary { display: inline-flex; align-items: center; justify-content: center; padding: 14px 22px; border-radius: 999px; font-weight: 700; text-decoration: none; border: 1px solid transparent; transition: transform .18s ease, background .18s ease; }
+.button { background: var(--cyan); color: var(--bg); }
+.button-secondary { background: transparent; color: var(--text); border-color: rgba(255,255,255,0.12); }
+.button:hover, .button-secondary:hover { transform: translateY(-1px); }
+.meta { color: var(--muted); font-size: 0.95rem; }
+@media (max-width: 820px) { body { padding: 16px; } .slide { padding: 32px 28px; } .slide h1 { font-size: 2.8rem; } .slide h2 { font-size: 2rem; } }

@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Artigo — Margem de Contribuição (Slides)</title>
+<style>
+:root {
+  --dark-navy: #0F1922;
+  --dark-navy-light: #1a2a3a;
+  --white: #FFFFFF;
+  --cyan: #00D9D9;
+  --light-blue: #4A9EFF;
+  --gray-blue: #7A8FA0;
+  --red: #ef4444;
+  --gold: #f59e0b;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; min-height: 100%; height: 100%; background: var(--dark-navy); color: var(--white); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+.slides { height: 100vh; overflow: hidden; position: relative; }
+.slide { width: 100%; height: 100%; display: none; padding: 60px 40px 80px; align-items: flex-start; justify-content: center; }
+.slide.active { display: flex; }
+.container { max-width: 1100px; width: 100%; margin: 0 auto; }
+.h1 { font-size: 44px; line-height: 1.05; margin-bottom: 16px; }
+.h1 .accent { color: var(--cyan); }
+.lead { color: var(--gray-blue); font-size: 18px; margin-bottom: 24px; }
+.card { background: var(--dark-navy-light); border: 1px solid rgba(0, 217, 217, 0.12); border-radius: 14px; padding: 22px; color: var(--gray-blue); }
+.cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; margin-top: 20px; }
+.table { width: 100%; border-collapse: collapse; margin-top: 16px; }
+.table th, .table td { padding: 12px; text-align: left; }
+.table thead { background: rgba(0, 217, 217, 0.08); }
+.table th { color: var(--cyan); }
+.table td { border-top: 1px solid rgba(255,255,255,0.08); color: var(--gray-blue); }
+.progress-bar { height: 10px; background: rgba(255,255,255,0.08); border-radius: 999px; overflow: hidden; }
+.progress-fill { height: 100%; border-radius: inherit; background: linear-gradient(90deg, var(--cyan), var(--light-blue)); }
+.btn { background: var(--cyan); color: var(--dark-navy); border: none; padding: 12px 20px; border-radius: 999px; font-weight: 700; cursor: pointer; }
+.btn.secondary { background: var(--light-blue); color: var(--dark-navy); }
+.nav-arrows { position: fixed; top: 50%; width: 100%; display: flex; justify-content: space-between; transform: translateY(-50%); padding: 0 20px; pointer-events: none; }
+.arrow { background: rgba(255,255,255,0.08); border-radius: 12px; padding: 14px; cursor: pointer; color: var(--white); border: 1px solid rgba(255,255,255,0.12); pointer-events: auto; }
+.progress-dots { position: fixed; right: 18px; top: 50%; transform: translateY(-50%); display: flex; flex-direction: column; gap: 10px; }
+.dot { width: 12px; height: 12px; border-radius: 50%; background: rgba(255,255,255,0.12); cursor: pointer; }
+.dot.active { background: var(--cyan); }
+.footer { position: fixed; left: 0; right: 0; bottom: 0; padding: 14px 28px; background: linear-gradient(180deg, transparent, rgba(0,0,0,0.4)); display: flex; justify-content: space-between; align-items: center; color: var(--gray-blue); flex-wrap: wrap; gap: 8px; }
+.footer .author { color: var(--cyan); font-weight: 700; }
+.footer .footnote { width: 100%; font-size: 12px; line-height: 1.4; color: var(--gray-blue); }
+.presenter-notes { margin-top: 18px; background: rgba(255,255,255,0.04); border-left: 4px solid rgba(0,217,217,0.2); padding: 14px 18px; border-radius: 10px; color: var(--gray-blue); font-size: 14px; line-height: 1.6; }
+@media (max-width: 900px) { .slide { padding: 40px 20px 80px; } .h1 { font-size: 30px; } .lead { font-size: 16px; } .cards-grid { grid-template-columns: 1fr; } .nav-arrows { padding: 0 10px; } .footer { padding: 12px 16px; } }
+@media print {
+  body { background: white !important; color: black !important; }
+  .slides { display: block !important; }
+  .slide { display: block !important; position: relative !important; width: auto !important; height: auto !important; overflow: visible !important; page-break-after: always; padding: 40px !important; }
+  .nav-arrows, .progress-dots { display: none !important; }
+  .footer { position: static !important; background: transparent !important; padding: 12px 0 !important; display: block !important; color: black !important; }
+  .footer .author { color: black !important; }
+  .footer .footnote { font-size: 10px !important; color: #333 !important; }
+  .presenter-notes { display: none !important; }
+}</style>
+</head>
+<body>
+<div class="slides" id="slides">
+  <section class="slide active" data-i="0">
+    <div class="container">
+      <div class="h1">Margem de <span class="accent">Contribuição</span></div>
+      <div class="lead">O que é, por que é decisiva e como simular impactos no e-commerce.</div>
+      <div style="display:flex;flex-wrap:wrap;gap:14px;margin-top:20px;">
+        <button class="btn" onclick="goTo(1)">Começar</button>
+        <button class="btn secondary" onclick="goTo(4)">Ver relatório</button>
+      </div>
+      <div class="presenter-notes"><strong>Nota:</strong> Use este slide para abrir a apresentação e posicionar o público no tema.</div>
+    </div>
+  </section>
+  <section class="slide" data-i="1">
+    <div class="container">
+      <div class="h1">O que é Margem de Contribuição?</div>
+      <div class="lead">Margem de Contribuição (MC) é o quanto sobra da receita depois de pagar os custos variáveis diretamente ligados à venda.</div>
+      <div class="card">
+        <strong>Fórmula</strong>
+        <div style="margin-top:10px;font-size:20px;color:var(--cyan);font-weight:700">MC = Receita − Custos Variáveis</div>
+        <ul style="margin-top:16px;" >
+          <li>CMV</li>
+          <li>Frete e logística</li>
+          <li>Taxas de marketplace e gateway</li>
+          <li>Comissões, embalagens e descontos</li>
+        </ul>
+      </div>
+      <div class="presenter-notes"><strong>Explicação:</strong> A MC é o dinheiro disponível para cobrir custos fixos e gerar lucro. A audiência deve entender que não é apenas receita, mas receita descontada dos custos diretos.</div>
+    </div>
+  </section>
+  <section class="slide" data-i="2">
+    <div class="container">
+      <div class="h1">Por que ela é decisiva?</div>
+      <div class="cards-grid">
+        <div class="card"><h3 style="color:var(--white);margin-bottom:10px">Sustentabilidade</h3><p>Receita alta não garante lucro quando a MC é baixa ou negativa.</p></div>
+        <div class="card"><h3 style="color:var(--white);margin-bottom:10px">Escalabilidade</h3><p>Crescer com MC ruim é ampliar o prejuízo; com MC saudável, o crescimento é sustentável.</p></div>
+        <div class="card"><h3 style="color:var(--white);margin-bottom:10px">Precificação</h3><p>A MC mostra o custo real de cada venda, não apenas o custo do produto.</p></div>
+        <div class="card"><h3 style="color:var(--white);margin-bottom:10px">Canais</h3><p>Cada canal tem MC diferente; canal próprio tende a ser mais lucrativo que marketplaces.</p></div>
+      </div>
+      <div class="presenter-notes"><strong>Roteiro:</strong> Fale sobre o risco de escalar sem margem e como canais diferentes alteram a decisão estratégica.</div>
+    </div>
+  </section>
+  <section class="slide" data-i="3">
+    <div class="container">
+      <div class="h1">Benchmarks gerais</div>
+      <div class="card" style="margin-top:18px;">
+        <table class="table">
+          <thead><tr><th>Segmento</th><th>MC saudável</th></tr></thead>
+          <tbody>
+            <tr><td>Moda e vestuário</td><td>40–60%</td></tr>
+            <tr><td>Eletrônicos</td><td>10–25%</td></tr>
+            <tr><td>Beleza e cosméticos</td><td>50–70%</td></tr>
+            <tr><td>Alimentos</td><td>20–40%</td></tr>
+            <tr><td>Produtos digitais</td><td>70–90%</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="presenter-notes"><strong>Observação:</strong> Benchmarks variam muito por operação, mas ajudam a entender se a MC está no caminho certo.</div>
+    </div>
+  </section>
+  <section class="slide" data-i="4">
+    <div class="container">
+      <div class="h1">Relatório Visual — Bella Casa</div>
+      <div class="lead">Resumo da operação híbrida de e-commerce com MC por canal e composição de custos.</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:24px;">
+        <div class="card"><div style="font-size:12px;text-transform:uppercase;color:var(--cyan);letter-spacing:1px;margin-bottom:10px">Receita total</div><div style="font-size:32px;font-weight:700;color:var(--white)">R$ 480k</div><div style="margin-top:8px;color:var(--gray-blue)">+12% vs Q4</div></div>
+        <div class="card"><div style="font-size:12px;text-transform:uppercase;color:var(--cyan);letter-spacing:1px;margin-bottom:10px">MC média</div><div style="font-size:32px;font-weight:700;color:var(--gold)">28%</div><div style="margin-top:8px;color:var(--gray-blue)">Abaixo do benchmark</div></div>
+        <div class="card"><div style="font-size:12px;text-transform:uppercase;color:var(--cyan);letter-spacing:1px;margin-bottom:10px">Pedidos/mês</div><div style="font-size:32px;font-weight:700;color:var(--white)">1.840</div><div style="margin-top:8px;color:var(--gray-blue)">Média trimestral</div></div>
+        <div class="card"><div style="font-size:12px;text-transform:uppercase;color:var(--cyan);letter-spacing:1px;margin-bottom:10px">Ticket médio</div><div style="font-size:32px;font-weight:700;color:var(--red)">R$ 87</div><div style="margin-top:8px;color:var(--gray-blue)">-6% vs Q4</div></div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:26px;">
+        <div class="card" style="background:rgba(255,255,255,0.04);border-color:rgba(255,255,255,0.12);">
+          <div style="font-size:12px;text-transform:uppercase;color:var(--cyan);letter-spacing:1px;margin-bottom:12px">MC por canal</div>
+          <div style="margin-bottom:16px;"><div style="display:flex;justify-content:space-between;color:var(--white);margin-bottom:6px">Loja própria <span style="color:#10b981">44%</span></div><div class="progress-bar"><div class="progress-fill" style="width:44%"></div></div></div>
+          <div style="margin-bottom:16px;"><div style="display:flex;justify-content:space-between;color:var(--white);margin-bottom:6px">Mercado Livre <span style="color:var(--gold)">24%</span></div><div class="progress-bar"><div class="progress-fill" style="width:24%"></div></div></div>
+          <div><div style="display:flex;justify-content:space-between;color:var(--white);margin-bottom:6px">Shopee <span style="color:var(--red)">12%</span></div><div class="progress-bar"><div class="progress-fill" style="width:12%"></div></div></div>
+        </div>
+        <div class="card" style="background:rgba(255,255,255,0.04);border-color:rgba(255,255,255,0.12);">
+          <div style="font-size:12px;text-transform:uppercase;color:var(--cyan);letter-spacing:1px;margin-bottom:12px">Composição de custos</div>
+          <table class="table">
+            <tbody>
+              <tr><td>CMV</td><td>32%</td></tr>
+              <tr><td>Frete</td><td>10% / 8% / 18%</td></tr>
+              <tr><td>Taxa marketplace</td><td>— / 16% / 20%</td></tr>
+              <tr><td>Gateway</td><td>4% / — / —</td></tr>
+              <tr><td>Embalagem</td><td>3% / 3% / 3%</td></tr>
+              <tr><td>Desconto</td><td>7% / 17% / 15%</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="presenter-notes"><strong>Mensagem:</strong> Este slide mostra o principal problema: MC geral boa na loja própria e muito pior em Shopee. Use isso para justificar a priorização do canal próprio.</div>
+    </div>
+  </section>
+  <section class="slide" data-i="5">
+    <div class="container">
+      <div class="h1">Como simular o impacto</div>
+      <div class="card" style="margin-top:18px;">
+        <p><strong>Alavancas:</strong> Ticket médio, Mix de canais e Pedidos/mês.</p>
+        <p><strong>Insight:</strong> Mover mix da Shopee para D2C geralmente tem mais efeito na MC do que apenas aumentar ticket.</p>
+      </div>
+      <div class="presenter-notes"><strong>Foco:</strong> Explique que o slide seguinte mostra a ferramenta interativa e que o objetivo é demonstrar impacto sem vender um item a mais.</div>
+    </div>
+  </section>
+  <section class="slide" data-i="6">
+    <div class="container">
+      <div class="h1">Diagnóstico e pontos de atenção</div>
+      <div class="card" style="margin-top:18px;">
+        <ul style="margin:0 0 0 18px; color:var(--gray-blue);">
+          <li><strong>Shopee:</strong> 17% da receita, apenas 12% de MC — frete e cupons destroem margem.</li>
+          <li><strong>Mercado Livre:</strong> volume alto, MC de 24% devido a taxas e descontos.</li>
+          <li><strong>Loja própria:</strong> melhor MC (44%) mas apenas 35% da receita; há espaço para escalar.</li>
+          <li><strong>Ticket médio:</strong> caiu 6% no trimestre; cuidado com mix de preço baixo.</li>
+        </ul>
+      </div>
+      <div class="presenter-notes"><strong>Abordagem:</strong> Use exemplos simples de R$ para mostrar quanto a margem perde por ponto percentual em cada canal.</div>
+    </div>
+  </section>
+  <section class="slide" data-i="7">
+    <div class="container">
+      <div class="h1">Plano de ação recomendado</div>
+      <div class="cards-grid" style="margin-top:18px;">
+        <div class="card"><h3 style="color:var(--white);margin-bottom:10px">Revisar precificação Shopee</h3><p>Ajustar preço em 8–12% para proteger MC.</p></div>
+        <div class="card"><h3 style="color:var(--white);margin-bottom:10px">Limitar cupons</h3><p>Definir teto de desconto em marketplaces para MC mínima de 20%.</p></div>
+        <div class="card"><h3 style="color:var(--white);margin-bottom:10px">Aumentar mix D2C</h3><p>Direcionar investimento de tráfego para canal próprio.</p></div>
+        <div class="card"><h3 style="color:var(--white);margin-bottom:10px">Aumentar ticket médio</h3><p>Testar upsell e kits para diluir custos fixos.</p></div>
+      </div>
+      <div class="presenter-notes"><strong>Próximo passo:</strong> Proponha metas de mix e cupons no piloto de 3 meses com estimativa de ganho de MC.</div>
+    </div>
+  </section>
+  <section class="slide" data-i="8">
+    <div class="container">
+      <div class="h1">Layouts e variações</div>
+      <div class="lead">Testei dois estilos para apresentação: um visual de showcase e outro mais educacional.</div>
+      <div style="display:flex;flex-wrap:wrap;gap:16px;margin-top:24px;">
+        <a href="./layouts-exemplos.html" target="_blank" rel="noopener noreferrer" style="text-decoration:none"><button class="btn">Ver exemplos</button></a>
+        <a href="./artigo-margem-contribuicao.html" target="_blank" rel="noopener noreferrer" style="text-decoration:none"><button class="btn secondary">Abrir artigo completo</button></a>
+      </div>
+      <div class="presenter-notes"><strong>Observação:</strong> Os dois estilos foram testados para diferentes públicos: executivo e educacional.</div>
+    </div>
+  </section>
+  <section class="slide" data-i="9">
+    <div class="container">
+      <div class="h1">Pronto para agir?</div>
+      <div class="lead">Use os dados para tomar decisões de precificação, mix e investimento.</div>
+      <button class="btn" onclick="goTo(0)">Voltar ao início</button>
+      <div class="presenter-notes"><strong>Encerramento:</strong> Termine reforçando o impacto da MC na saúde do negócio e o valor de ações rápidas.</div>
+    </div>
+  </section>
+</div>
+<div class="nav-arrows">
+  <div class="arrow" id="prev">◀</div>
+  <div class="arrow" id="next">▶</div>
+</div>
+<div class="progress-dots" id="dots"></div>
+<div class="footer">
+  <div class="author">CARLOS MONTEIRO</div>
+  <div>ECOMMERCE ANALYST | DATA DRIVEN GROWTH</div>
+  <div class="footnote">Nota de rodapé: Análise baseada em simulações de margem de contribuição para canais de e-commerce.</div>
+</div>
+<script>
+const slides = Array.from(document.querySelectorAll('.slide'));
+let idx = 0;
+const dotsRoot = document.getElementById('dots');
+function renderDots() {
+  dotsRoot.innerHTML = '';
+  slides.forEach((slide, i) => {
+    const dot = document.createElement('div');
+    dot.className = 'dot' + (i === idx ? ' active' : '');
+    dot.addEventListener('click', () => goTo(i));
+    dotsRoot.appendChild(dot);
+  });
+}
+function show(index) {
+  slides.forEach(slide => slide.classList.remove('active'));
+  slides[index].classList.add('active');
+  idx = index;
+  renderDots();
+}
+function goTo(index) {
+  if (index < 0) index = 0;
+  if (index > slides.length - 1) index = slides.length - 1;
+  show(index);
+}
+document.getElementById('next').addEventListener('click', () => goTo(idx + 1));
+document.getElementById('prev').addEventListener('click', () => goTo(idx - 1));
+window.addEventListener('keydown', event => {
+  if (event.key === 'ArrowRight') goTo(idx + 1);
+  if (event.key === 'ArrowLeft') goTo(idx - 1);
+  if (event.key === 'Home') goTo(0);
+  if (event.key === 'End') goTo(slides.length - 1);
+});
+renderDots();
+</script>
+</body>
+</html>
