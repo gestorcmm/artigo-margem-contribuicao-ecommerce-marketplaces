@@ -6,45 +6,84 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     body { margin: 0; font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #f6fbff; color: #102a43; }
-    .page { max-width: 900px; margin: 0 auto; padding: 3rem 1.5rem; }
+    .page { max-width: 960px; margin: 0 auto; padding: 3rem 1.5rem; }
     header { text-align: center; margin-bottom: 2rem; }
     h1 { margin: 0; font-size: clamp(2rem, 3vw, 3rem); line-height: 1.05; }
-    p.lead { margin: 1rem auto 2rem; max-width: 700px; font-size: 1.125rem; color: #334e68; }
-    .actions { display: grid; gap: 1rem; margin: 2rem 0; }
-    .btn { display: inline-flex; align-items: center; justify-content: center; padding: 1rem 1.25rem; border: none; border-radius: 999px; font-weight: 700; text-decoration: none; color: white; background: #0067c5; box-shadow: 0 18px 30px rgba(0, 103, 197, .15); transition: transform .2s ease, box-shadow .2s ease; }
+    p.lead { margin: 1rem auto 2rem; max-width: 720px; font-size: 1.15rem; color: #334e68; }
+    .card { background: white; border-radius: 1.25rem; padding: 1.8rem; box-shadow: 0 24px 45px rgba(16, 42, 67, .08); margin-bottom: 1.5rem; }
+    h2 { margin-top: 0; }
+    p, li { line-height: 1.75; color: #475569; }
+    ul { margin: 0.75rem 0 0 1.4rem; }
+    .actions { display: grid; gap: 1rem; margin-top: 1.5rem; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; padding: 1rem 1.4rem; border: none; border-radius: 999px; font-weight: 700; text-decoration: none; color: white; background: #0067c5; box-shadow: 0 18px 30px rgba(0, 103, 197, .15); transition: transform .2s ease, box-shadow .2s ease; }
     .btn:hover { transform: translateY(-1px); box-shadow: 0 22px 34px rgba(0, 103, 197, .2); }
     .secondary { background: #024b84; }
-    .card { background: white; border-radius: 1rem; padding: 1.5rem; box-shadow: 0 18px 30px rgba(16, 42, 67, .08); }
-    .card h2 { margin-top: 0; }
-    .links { display: grid; gap: 1rem; margin-top: 1.5rem; }
-    .footnote { margin-top: 2rem; font-size: .95rem; color: #627d98; }
-    @media (min-width: 640px) { .actions { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    .footnote { color: #627d98; font-size: .95rem; }
+    .callout { background: #e8f4ff; border-left: 4px solid #0067c5; padding: 1rem 1.2rem; margin-top: 1rem; }
+    @media (min-width: 760px) { .actions { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
   </style>
 </head>
 <body>
   <main class="page">
     <header>
       <h1>Artigo Margem de Contribuição — E-commerce Marketplaces</h1>
-      <p class="lead">Página inicial direta do projeto. Aqui você encontra o artigo e os principais recursos do estudo sobre margem de contribuição em canais de e-commerce e marketplaces.</p>
+      <p class="lead">Entenda como calcular a margem de contribuição, por que ela é crítica para marketplaces e como usar o resultado para decisões de preço, promoções e canal.</p>
     </header>
 
     <div class="card">
-      <h2>Recursos disponíveis</h2>
-      <p>Este repositório contém conteúdo estático preparado para publicação pública. Use os links abaixo para abrir o artigo completo, o deck de slides, os layouts e a versão modular.</p>
-      <div class="links">
-        <a class="btn" href="Artigo-MC-slides.html">Abrir apresentação de slides</a>
-        <a class="btn secondary" href="slides/index.html">Ir ao índice de slides</a>
-        <a class="btn" href="layouts-exemplos.html">Ver layouts e exemplos</a>
-        <a class="btn secondary" href="README.md">Ver README</a>
+      <h2>1. O que é Margem de Contribuição</h2>
+      <p>A margem de contribuição é o valor que sobra da receita após o pagamento de todos os custos variáveis diretamente ligados à venda. É essa sobra que vai servir para cobrir despesas fixas e gerar lucro.</p>
+      <div class="callout">
+        <strong>Fórmula básica</strong>: <br>
+        Margem de Contribuição = Receita − Custos Variáveis
       </div>
     </div>
 
-    <div class="card" style="margin-top: 1.5rem;">
-      <h2>Nota</h2>
-      <p>Se você tinha um arquivo de artigo completo chamado <code>artigo-margem-contribuicao.html</code>, ele não estava presente na pasta do repositório. Esta página serve como uma entrada pública direta para o conteúdo disponível hoje.</p>
+    <div class="card">
+      <h2>2. Custos variáveis típicos em e-commerce</h2>
+      <ul>
+        <li>Custo do produto (CMV).</li>
+        <li>Frete e logística.</li>
+        <li>Taxas de marketplace e comissões de venda.</li>
+        <li>Cupons, descontos e gateway de pagamento.</li>
+        <li>Embalagem e manuseio específicos do pedido.</li>
+      </ul>
     </div>
 
-    <p class="footnote">Nota de rodapé: página atualizada para servir diretamente como home do site público.</p>
+    <div class="card">
+      <h2>3. Por que ela importa em marketplaces</h2>
+      <p>Em canais como Mercado Livre e Shopee, as taxas e subsídios consomem parte significativa da receita. Isso significa que o mesmo produto pode ter uma margem aceitável em loja própria e uma margem muito menor em marketplace.</p>
+      <p>Vendas altas nos marketplaces são interessantes, mas só se a margem de contribuição suportar os custos fixos e permitir lucro.</p>
+    </div>
+
+    <div class="card">
+      <h2>4. Exemplos de canais</h2>
+      <ul>
+        <li><strong>Loja própria</strong>: geralmente oferece a maior margem porque o controle sobre preço, frete e comissões é maior.</li>
+        <li><strong>Mercado Livre</strong>: bom volume, mas taxas e concorrência pressionam a margem.</li>
+        <li><strong>Shopee</strong>: forte para aquisição, mas a margem costuma ser menor devido a descontos e fretes subsidiados.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>5. O que fazer com esse indicador</h2>
+      <ul>
+        <li>Use a margem de contribuição para decidir se vale a pena investir em promoção ou manter preço.</li>
+        <li>Ajuste cupons e fretes em canais de baixa margem.</li>
+        <li>Priorize mix de produto e canais que entreguem margem suficiente para cobrir custos fixos.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>6. Conteúdo adicional</h2>
+      <p>Existe um deck de slides com exemplos práticos, layouts de apresentação e uma versão modular do artigo para navegação por tópicos.</p>
+      <div class="actions">
+        <a class="btn" href="Artigo-MC-slides.html">Abrir Slides</a>
+        <a class="btn secondary" href="slides/index.html">Índice de Slides</a>
+      </div>
+    </div>
+
+    <p class="footnote">Este artigo foi atualizado para uso público e agora inclui os principais conceitos necessários para decisões de margem em e-commerce e marketplaces.</p>
   </main>
 </body>
 </html>
