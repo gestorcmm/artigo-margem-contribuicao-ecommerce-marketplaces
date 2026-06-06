@@ -4,59 +4,16 @@
   <meta charset="utf-8">
   <title>Artigo Margem de Contribuição — E-commerce Marketplaces</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    :root {
-      --bg: #f6fbff;
-      --surface: #ffffff;
-      --surface-soft: #eef6ff;
-      --text: #112d42;
-      --muted: #4f6c85;
-      --primary: #0f66ff;
-      --primary-strong: #0d4ec2;
-      --border: rgba(15, 102, 255, .12);
-    }
-    * { box-sizing: border-box; }
-    body { margin: 0; font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: var(--bg); color: var(--text); }
-    .page { max-width: 1040px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem; }
-    header { margin-bottom: 2.5rem; }
-    h1 { margin: 0; font-size: clamp(2.7rem, 4vw, 4.8rem); line-height: 1.02; letter-spacing: -0.03em; }
-    .subtitle { max-width: 780px; margin: 1.25rem 0 0; font-size: 1.1rem; line-height: 1.8; color: var(--muted); }
-    .hero { position: relative; background: linear-gradient(180deg, rgba(15,102,255,.14), rgba(255,255,255,.93)); border: 1px solid rgba(15,102,255,.18); border-radius: 32px; padding: 3rem 2rem; overflow: hidden; }
-    .hero::before { content: ""; position: absolute; top: -40px; right: -60px; width: 220px; height: 220px; background: radial-gradient(circle, rgba(15,102,255,.2), transparent 55%); border-radius: 50%; }
-    .hero::after { content: ""; position: absolute; bottom: -50px; left: -40px; width: 180px; height: 180px; background: radial-gradient(circle, rgba(71, 108, 133, .14), transparent 55%); border-radius: 50%; }
-    .hero-grid { display: grid; gap: 2rem; }
-    .hero-actions { display: grid; gap: 1rem; grid-template-columns: 1fr 1fr; }
-    .btn { display: inline-flex; align-items: center; justify-content: center; padding: 1rem 1.6rem; border-radius: 999px; font-weight: 700; text-decoration: none; color: #fff; background: var(--primary); border: 1px solid transparent; transition: transform .18s ease, box-shadow .18s ease; box-shadow: 0 18px 42px rgba(15,102,255,.16); }
-    .btn:hover { transform: translateY(-1px); box-shadow: 0 24px 48px rgba(15,102,255,.2); }
-    .btn.secondary { background: var(--primary-strong); }
-    .card { background: var(--surface); border: 1px solid var(--border); border-radius: 24px; padding: 1.8rem; box-shadow: 0 28px 55px rgba(17,45,66,.06); }
-    .card + .card { margin-top: 1.5rem; }
-    .section-title { font-size: 1.4rem; margin-bottom: 1rem; }
-    .text-sm { font-size: .98rem; }
-    .grid-3 { display: grid; gap: 1rem; margin-top: 1rem; }
-    .grid-3 article { padding: 1.4rem; border-radius: 20px; background: var(--surface-soft); border: 1px solid rgba(15,102,255,.10); }
-    .grid-3 svg { width: 40px; height: 40px; color: var(--primary); margin-bottom: 1rem; }
-    .image-card { display: grid; grid-template-columns: 1fr; gap: 1rem; align-items: center; margin-top: 1.5rem; }
-    .image-card svg { width: 100%; max-width: 100%; height: auto; border-radius: 24px; background: #f0f7ff; }
-    .footer { margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(15,102,255,.12); color: var(--muted); }
-    .highlight { color: var(--primary); font-weight: 700; }
-    ul { margin: 0.9rem 0 0 1.4rem; color: var(--muted); line-height: 1.75; }
-    li { margin-bottom: 0.8rem; }
-    @media (min-width: 900px) { .hero-grid { grid-template-columns: 1.2fr .8fr; } .hero-actions { grid-template-columns: repeat(2, minmax(0, 1fr)); } .grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); } .image-card { grid-template-columns: 1fr 1fr; } }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <main class="page">
-    <header>
-      <h1>Margem de contribuição para e-commerce e marketplaces</h1>
-      <p class="subtitle">Um guia prático para entender o custo real de cada venda, comparar canais e tomar decisões de preço sem depender apenas do volume.</p>
-    </header>
-
     <section class="hero">
       <div class="hero-grid">
         <div>
-          <p class="section-title">Por que este artigo importa</p>
-          <p class="text-sm">A margem de contribuição revela se sua loja está gerando caixa real ou apenas movimentando pedidos. Aqui você verá o conceito em linguagem direta, exemplos aplicáveis ao seu e-commerce e os principais pontos para ajustar ações em marketplaces.</p>
+          <span class="tag">Artigo</span>
+          <h1>Margem de contribuição — como decidir com dados em e-commerce</h1>
+          <p class="subtitle">A leitura que ajuda gestores a identificar canais de maior valor, precificar com mais segurança e evitar promoções que prejudicam o lucro.</p>
           <div class="hero-actions">
             <a class="btn" href="Artigo-MC-slides.html">Abrir slides</a>
             <a class="btn secondary" href="slides/index.html">Ver índice de slides</a>
@@ -66,66 +23,71 @@
           <svg viewBox="0 0 800 560" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="24" y="24" width="752" height="512" rx="36" fill="#E8F4FF"/><rect x="88" y="96" width="224" height="192" rx="24" fill="#fff" stroke="#8CBBFF" stroke-width="2"/><rect x="336" y="184" width="224" height="152" rx="24" fill="#fff" stroke="#8CBBFF" stroke-width="2"/><rect x="584" y="128" width="144" height="248" rx="24" fill="#fff" stroke="#8CBBFF" stroke-width="2"/><path d="M96 368h608" stroke="#0F66FF" stroke-width="16" stroke-linecap="round"/><circle cx="184" cy="176" r="18" fill="#0F66FF"/><circle cx="424" cy="256" r="18" fill="#0F66FF"/><circle cx="656" cy="200" r="18" fill="#0F66FF"/></svg>
           <div>
             <strong>Visão rápida</strong>
-            <p class="text-sm">Gráficos e blocos visuais ajudam a entender a margem por canal sem precisar pular para outro recurso.</p>
+            <p class="text-sm">Estrutura minimalista, cores consistentes e blocos de leitura que ajudam o usuário a avançar sem se perder.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="card">
-      <h2 class="section-title">1. Entenda a margem de contribuição</h2>
-      <p>Margem de contribuição é o que sobra da venda depois dos custos variáveis. Não se trata da receita total: trata-se do valor que, de fato, pode pagar custos fixos e gerar lucro.</p>
-      <p class="highlight">Margem de Contribuição = Receita − Custos Variáveis</p>
-      <p class="text-sm">No e-commerce, custos variáveis incluem CMV, frete, comissões, taxas de marketplace, descontos e embalagens. O impacto desses itens muda muito de canal para canal.</p>
+    <section class="card" style="margin-top: 2rem;">
+      <h2 class="section-title">Por que isso importa</h2>
+      <p>A margem de contribuição revela o valor real de cada venda, além da receita. Em marketplaces, muitos custos indiretos podem reduzir drasticamente o lucro, mesmo quando o volume de vendas cresce.</p>
+      <blockquote>Se a operação só cresce em pedidos, mas não em margem, a empresa está apenas escalando custos.</blockquote>
     </section>
 
-    <section class="card">
-      <h2 class="section-title">2. Onde a margem quebra</h2>
-      <div class="grid-3">
-        <article>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19h16"/><path d="M6 15V7"/><path d="M12 19V11"/><path d="M18 19V5"/></svg>
-          <strong>Custos diretos</strong>
-          <p>Frete e comissão aumentam rápido e reduzem a margem sem alterar o preço pago pelo cliente.</p>
-        </article>
-        <article>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 0 8"/><path d="M16 16a6 6 0 0 1 0-8"/><path d="M8 8a6 6 0 0 0 0 8"/><path d="M8 16a6 6 0 0 0 0-8"/></svg>
-          <strong>Promoções</strong>
-          <p>Descontos e cupons podem tirar toda a margem se não estiverem alinhados com o custo real de venda.</p>
-        </article>
-        <article>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 20h10"/><path d="M8 4h8"/><path d="M9 4v16"/><path d="M15 4v16"/></svg>
-          <strong>Canais diferentes</strong>
-          <p>Loja própria, marketplace e atacado têm margens muito distintas — não compare receita sem comparar margem.</p>
-        </article>
+    <section class="grid-3" style="margin-top: 1.5rem;">
+      <article class="feature-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19h16"/><path d="M6 15V7"/><path d="M12 19V11"/><path d="M18 19V5"/></svg>
+        <h3>Formula clara</h3>
+        <p>MC = Receita − Custos Variáveis. O resultado mostra o quanto está disponível para cobrir despesas fixas.</p>
+      </article>
+      <article class="feature-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16"/><path d="M4 12h8"/><path d="M4 17h16"/></svg>
+        <h3>Custos de marketplace</h3>
+        <p>Comissões, fretes, cupons e gateway reduzem a margem. Um preço “bom” no marketplace pode ser ruim para seu caixa.</p>
+      </article>
+      <article class="feature-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 17l3 3 9-9"/><path d="M15 7h6v6"/><path d="M4 6h5"/><path d="M4 12h3"/><path d="M4 18h2"/></svg>
+        <h3>Decisão com dados</h3>
+        <p>Use a MC para comparar canais e priorizar onde o investimento em tráfego e mídia gera resultado sustentável.</p>
+      </article>
+    </section>
+
+    <section class="card" style="margin-top: 2rem;">
+      <h2 class="section-title">Como calcular</h2>
+      <p>A margem começa com a receita bruta e subtrai os custos variáveis.</p>
+      <ul>
+        <li>Receita de venda</li>
+        <li>CMV</li>
+        <li>Frete e logística</li>
+        <li>Taxas e comissões</li>
+        <li>Cupons e descontos</li>
+      </ul>
+      <p class="text-sm"><strong>Exemplo</strong>: Venda = R$ 250, custos variáveis = R$ 190. MC = R$ 60 (24%).</p>
+    </section>
+
+    <section class="card" style="margin-top: 2rem;">
+      <h2 class="section-title">Canais comparados</h2>
+      <div class="image-card">
+        <svg viewBox="0 0 800 420" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="800" height="420" rx="36" fill="#0F1922"/><rect x="72" y="84" width="186" height="238" rx="24" fill="#0F66FF" opacity="0.17"/><rect x="298" y="134" width="146" height="188" rx="24" fill="#00D9D9" opacity="0.18"/><rect x="478" y="178" width="120" height="144" rx="24" fill="#4A9EFF" opacity="0.22"/><rect x="628" y="226" width="70" height="96" rx="24" fill="#00D9D9" opacity="0.28"/><path d="M72 332h626" stroke="#4A9EFF" stroke-width="16" stroke-linecap="round"/></svg>
+        <div>
+          <p class="text-sm">Este gráfico simbólico mostra como diferentes canais podem entregar margens muito distintas: loja própria tende a ser mais alta, marketplaces exigem cuidado extra.</p>
+        </div>
       </div>
     </section>
 
-    <section class="card">
-      <h2 class="section-title">3. Exemplo prático</h2>
-      <p>Imagine um produto vendido a R$ 250:</p>
+    <section class="card" style="margin-top: 2rem;">
+      <h2 class="section-title">Ação prática</h2>
       <ul>
-        <li>CMV: R$ 100</li>
-        <li>Frete-shop: R$ 30</li>
-        <li>Taxa de marketplace: R$ 40</li>
-        <li>Desconto ou cupom: R$ 20</li>
+        <li>Priorize canais com margem saudável antes de escalar investimento.</li>
+        <li>Controle descontos e cupons para evitar venda com margem negativa.</li>
+        <li>Monitore a margem de contribuição a cada alteração de preço ou campanha.</li>
       </ul>
-      <p class="text-sm"><strong>Margem de Contribuição</strong> = R$ 250 − R$ 190 = R$ 60. Isso equivale a 24% de margem.</p>
-      <p class="text-sm">Se a mesma venda for feita em loja própria, sem marketplace, a margem pode subir para 40-50%, mudando completamente a estratégia de investimento em tráfego.</p>
     </section>
 
-    <section class="card">
-      <h2 class="section-title">4. Como usar essa informação</h2>
-      <ul>
-        <li>Compare canais pelo indicador, não apenas pela receita.</li>
-        <li>Defina promoções que não canibalizem a margem.</li>
-        <li>Priorize produtos e canais que entreguem margem suficiente para cobrir custos fixos.</li>
-      </ul>
-      <p class="text-sm">Essa métrica ajuda a evitar decisões baseadas apenas em volume e estimula um controle mais saudável sobre lucro real.</p>
-    </section>
-
-    <section class="card">
-      <h2 class="section-title">5. Próximo passo</h2>
-      <p>Use os slides para ver exemplos visuais de margem por canal, relatórios e recomendações de layout. O material foi pensado para tornar a leitura mais fluida e a decisão mais rápida.</p>
+    <section class="card" style="margin-top: 2rem;">
+      <h2 class="section-title">Continuar explorando</h2>
+      <p>Depois de ler este artigo, veja os slides para detalhar exemplos por canal e acesse o índice de slides para navegar por cada ponto com mais foco.</p>
       <div class="hero-actions" style="margin-top:1rem;">
         <a class="btn" href="Artigo-MC-slides.html">Abrir slides</a>
         <a class="btn secondary" href="slides/index.html">Ir aos slides</a>
@@ -133,7 +95,7 @@
     </section>
 
     <footer class="footer">
-      <p>Atualizado para oferecer um fluxo mais leve, com menos menus e mais clareza. Se quiser, posso inserir gráficos reais ou um infográfico para a versão seguinte.</p>
+      <p>Atualizado com uma estética uniforme, cores dos slides e uma leitura mais refinada. Posso seguir e fazer a mesma linha também em `Artigo-MC-slides.html` se quiser.</p>
     </footer>
   </main>
 </body>
