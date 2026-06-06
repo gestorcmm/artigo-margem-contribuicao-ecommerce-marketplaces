@@ -29,6 +29,11 @@ body {
   color: var(--text);
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: Montserrat, Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-weight: 700;
+}
+
 button, a {
   font: inherit;
 }
